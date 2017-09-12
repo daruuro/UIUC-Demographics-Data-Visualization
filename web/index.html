@@ -1,0 +1,38 @@
+{% extends "static/templates/projectBase.html" %}
+{% block projectContent %}
+
+<h2>Project #1: Gender and Racial Diversity at UIUC, 2005-2015</h2>
+<h5>by Abdullahi, Angelos, Peng, and Yuxin </h5>
+
+<style>
+.checkboxes {
+  width: 100%;
+  font-weight: bold;
+}
+.checkboxes li {
+  vertical-align: middle; text-align: center;
+  margin: 10px 0;
+  display: inline-block;
+  outline: 1px solid #1e5180;
+  float: left;
+  width: 25%;
+}
+</style>
+<h3>Introduction</h3>
+        <p>
+          A simple visualization of demographics changes at the University of Illinois Urbana-Champaign, over the decade 2005 to 2015.
+          The dataset for this visualization was provided by the <a href="http://dmi.illinois.edu/">Division of Management Information</a> at UIUC,
+          was cleaned and processed using <a href="http://pandas.pydata.org/">Pandas</a>, and visualized using <a href="https://d3js.org/">D3.js</a>.
+        </p>
+
+<ul class="checkboxes">
+                        <li><input type="checkbox" id="check05" name="Term/Year Code" value="2005" />Fall 2005 <br /></li>
+                        <li><input type="checkbox" id="check10" name="Term/Year Code" value="2010" />Fall 2010 <br /></li>
+                        <li><input type="checkbox" id="check15" name="Term/Year Code" value="2015" />Fall 2015 <br /></li>
+                        <li><input type="checkbox" id="small"/>Smaller circles <br /></li>
+                      </ul>
+<div id="chart"></div>
+
+<script src="web/vis.js"></script>
+
+{% endblock %}
